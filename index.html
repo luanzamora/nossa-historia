@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24 de Setembro ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #090909;
+    color: white;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+.tela {
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    animation: aparecer 1s ease;
+}
+
+.tela.ativa {
+    display: flex;
+}
+
+.conteudo {
+    max-width: 650px;
+    width: 100%;
+}
+
+.pequeno {
+    color: #aaa;
+    font-family: Arial, sans-serif;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(38px, 10vw, 70px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(28px, 7vw, 48px);
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+button {
+    margin-top: 35px;
+    padding: 15px 32px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.data {
+    font-family: Arial, sans-serif;
+    letter-spacing: 8px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.carta {
+    text-align: left;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.carta p {
+    font-size: 17px;
+}
+
+.linha {
+    margin: 30px 0;
+    height: 1px;
+    background: rgba(255,255,255,.15);
+}
+
+.item {
+    margin: 25px 0;
+    padding-left: 15px;
+    border-left: 2px solid #fff;
+    text-align: left;
+}
+
+.item strong {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.final {
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.nome {
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.coracao {
+    font-size: 60px;
+    animation: pulsar 1.5s infinite;
+    margin-bottom: 25px;
+}
+
+.fundo-coracoes {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.coracao-fundo {
+    position: absolute;
+    bottom: -50px;
+    opacity: .15;
+    animation: subir linear infinite;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsar {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-120vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="fundo-coracoes" id="coracoes"></div>
+
+<!-- TELA 1 -->
+<section class="tela ativa" id="tela1">
+    <div class="conteudo">
+        <div class="coracao">♡</div>
+
+        <div class="pequeno">
+            UMA COISA QUE EU FIZ PRA VOCÊ
+        </div>
+
+        <h1>Oi, meu amor.</h1>
+
+        <p>
+            Eu queria te entregar uma coisa diferente...
+        </p>
+
+        <button onclick="proximaTela(2)">
+            Abrir ♡
+        </button>
+    </div>
+</section>
+
+<!-- TELA 2 -->
+<section class="tela" id="tela2">
+    <div class="conteudo">
+
+        <div class="data">
+            24 • 09 • 2026
+        </div>
+
+        <h2>O começo da nossa história.</h2>
+
+        <p>
+            Talvez naquele dia a gente não soubesse
+            o quanto tudo ainda iria significar.
+        </p>
+
+        <button onclick="proximaTela(3)">
+            Continuar
+        </button>
+    </div>
+</section>
+
+<!-- TELA 3 -->
+<section class="tela" id="tela3">
+    <div class="conteudo">
+
+        <div class="pequeno">
+            UMA CARTA PRA VOCÊ
+        </div>
+
+        <h2>Amor...</h2>
+
+        <div class="carta">
+
+            <p>
+                Eu nunca fui muito bom em colocar tudo o que sinto
+                em palavras. Mas por você eu quis tentar.
+            </p>
+
+            <div class="linha"></div>
+
+            <p>
+                Desde que você entrou na minha vida, muita coisa
+                mudou. Você conseguiu ocupar um espaço em mim
+                que eu nem sabia que existia.
+            </p>
+
+            <br>
+
+            <p>
+                Eu amo nossas conversas, nossas brincadeiras,
+                nossos momentos e até aquelas pequenas coisas
+                que talvez você nem perceba.
+            </p>
+
+            <br>
+
+            <p>
+                Eu não quero que isso seja apenas uma história bonita
+                por um tempo. Quero continuar conhecendo você,
+                cuidando de nós e construindo cada capítulo ao seu lado.
+            </p>
+
+            <br>
+
+            <p>
+                Eu te amo. E espero que você nunca duvide disso.
+            </p>
+
+        </div>
+
+        <button onclick="proximaTela(4)">
+            Ainda tem mais...
+        </button>
+    </div>
+</section>
+
+<!-- TELA 4 -->
+<section class="tela" id="tela4">
+    <div class="conteudo">
+
+        <div class="pequeno">
+            SE EU PUDESSE TE DIZER SÓ 3 COISAS
+        </div>
+
+        <div class="item">
+            <strong>01 — Eu escolho você.</strong>
+            <p>
+                Mesmo nos dias difíceis, eu quero continuar
+                escolhendo nós dois.
+            </p>
+        </div>
+
+        <div class="item">
+            <strong>02 — Você é importante pra mim.</strong>
+            <p>
+                Mais do que talvez eu consiga explicar.
+            </p>
+        </div>
+
+        <div class="item">
+            <strong>03 — Isso é só o começo.</strong>
+            <p>
+                Ainda existem muitos momentos que eu quero viver
+                ao seu lado.
+            </p>
+        </div>
+
+        <button onclick="proximaTela(5)">
+            Próximo ❤️
+        </button>
+    </div>
+</section>
+
+<!-- TELA 5 -->
+<section class="tela" id="tela5">
+    <div class="conteudo">
+
+        <div class="coracao">♡</div>
+
+        <div class="pequeno">
+            E AGORA...
+        </div>
+
+        <h2>Quero te fazer uma pergunta.</h2>
+
+        <p>
+            Você quer continuar escrevendo essa história comigo?
+        </p>
+
+        <button onclick="proximaTela(6)">
+            Sim ❤️
+        </button>
+
+    </div>
+</section>
+
+<!-- TELA FINAL -->
+<section class="tela" id="tela6">
+    <div class="conteudo">
+
+        <div class="coracao">♥</div>
+
+        <div class="pequeno">
+            ENTÃO FICA COMBINADO
+        </div>
+
+        <h2>Nossa história.</h2>
+
+        <p class="final">
+            Essa história agora tem dois autores.
+            <br><br>
+
+            <strong>Luan & Lívia</strong>
+            <br><br>
+
+            E se depender de mim,
+            esse é só o começo.
+        </p>
+
+        <div class="nome">
+            24.09.2026
+        </div>
+
+    </div>
+</section>
+
+<script>
+
+function proximaTela(numero) {
+
+    document.querySelectorAll(".tela").forEach(tela => {
+        tela.classList.remove("ativa");
+    });
+
+    document.getElementById("tela" + numero).classList.add("ativa");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+/* corações no fundo */
+
+const container = document.getElementById("coracoes");
+
+for (let i = 0; i < 18; i++) {
+
+    const coracao = document.createElement("div");
+
+    coracao.className = "coracao-fundo";
+    coracao.innerHTML = "♡";
+
+    coracao.style.left = Math.random() * 100 + "%";
+    coracao.style.fontSize = (15 + Math.random() * 25) + "px";
+    coracao.style.animationDuration = (7 + Math.random() * 8) + "s";
+    coracao.style.animationDelay = Math.random() * 8 + "s";
+
+    container.appendChild(coracao);
+}
+
+</script>
+
+</body>
+  </html>
